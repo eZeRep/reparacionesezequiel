@@ -174,8 +174,11 @@ function Index() {
       <section className="relative py-16 overflow-hidden">
         <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
         <div className="relative mx-auto max-w-5xl px-6 text-center text-white">
+          <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold mb-4" style={{ backgroundColor: "oklch(0.65 0.22 35)", color: "white" }}>
+            <Zap className="h-4 w-4 fill-current" /> ATENCIÓN DE URGENCIAS
+          </div>
           <h2 className="text-3xl md:text-5xl font-black">¿Tu equipo no funciona?</h2>
-          <p className="mt-4 text-lg md:text-xl text-white/90">Escribinos por WhatsApp y coordinamos una visita sin cargo.</p>
+          <p className="mt-4 text-lg md:text-xl text-white/90">Escribinos por WhatsApp y coordinamos una visita sin cargo. Reparamos en el día.</p>
           <a
             href={whatsappLink}
             target="_blank"
@@ -183,7 +186,7 @@ function Index() {
             className="mt-8 inline-flex items-center gap-3 rounded-full px-10 py-5 text-lg font-bold text-white shadow-[var(--shadow-elegant)] transition-[var(--transition-bounce)] hover:scale-105"
             style={{ backgroundColor: "var(--whatsapp)" }}
           >
-            <Phone className="h-6 w-6" /> Contactar ahora
+            <Phone className="h-6 w-6" /> Pedí tu visita sin costo
           </a>
         </div>
       </section>
