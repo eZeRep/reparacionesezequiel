@@ -62,21 +62,44 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --radius: 0.75rem;
+  --background: oklch(0.99 0.005 240);
+  --foreground: oklch(0.18 0.05 250);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --card-foreground: oklch(0.18 0.05 250);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.18 0.05 250);
+  --primary: oklch(0.45 0.18 250);
+  --primary-foreground: oklch(0.99 0.005 240);
+  --secondary: oklch(0.78 0.13 230);
+  --secondary-foreground: oklch(0.18 0.05 250);
+  --muted: oklch(0.96 0.015 240);
+  --muted-foreground: oklch(0.5 0.04 250);
+  --accent: oklch(0.85 0.11 220);
+  --accent-foreground: oklch(0.18 0.05 250);
+
+  /* Brand */
+  --brand-deep: oklch(0.32 0.16 255);
+  --brand-primary: oklch(0.45 0.18 250);
+  --brand-sky: oklch(0.72 0.14 230);
+  --brand-light: oklch(0.92 0.06 225);
+  --whatsapp: oklch(0.65 0.18 145);
+  --whatsapp-hover: oklch(0.58 0.18 145);
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, oklch(0.32 0.16 255) 0%, oklch(0.45 0.18 250) 50%, oklch(0.62 0.16 230) 100%);
+  --gradient-sky: linear-gradient(135deg, oklch(0.85 0.11 220) 0%, oklch(0.95 0.04 225) 100%);
+  --gradient-cta: linear-gradient(135deg, oklch(0.45 0.18 250), oklch(0.62 0.16 230));
+
+  /* Shadows */
+  --shadow-soft: 0 4px 20px -4px oklch(0.45 0.18 250 / 0.15);
+  --shadow-elegant: 0 20px 50px -12px oklch(0.32 0.16 255 / 0.25);
+  --shadow-glow: 0 0 40px oklch(0.62 0.16 230 / 0.4);
+
+  /* Transitions */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(0.929 0.013 255.508);
