@@ -96,6 +96,19 @@ function Index() {
         </div>
       </section>
 
+      {/* RESEÑAS (justo después del hero) */}
+      <section className="py-16 md:py-20 bg-muted">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="text-center mb-10">
+            <div className="inline-block px-4 py-1 rounded-full text-sm font-semibold mb-4" style={{ backgroundColor: "var(--brand-light)", color: "var(--brand-deep)" }}>
+              TESTIMONIOS REALES
+            </div>
+            <h2 className="text-3xl md:text-5xl font-black text-foreground">Lo que dicen nuestros clientes</h2>
+          </div>
+          <ReviewsCarousel />
+        </div>
+      </section>
+
       {/* BENEFITS BAR */}
       <section className="border-y border-border bg-card">
         <div className="mx-auto max-w-7xl px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -103,7 +116,7 @@ function Index() {
             { icon: MapPin, title: "Visita sin costo", text: "En Lanús y alrededores" },
             { icon: ShieldCheck, title: "3 meses de garantía", text: "En todas las reparaciones" },
             { icon: Award, title: "+20 años", text: "De experiencia comprobable" },
-            { icon: Clock, title: "Respuesta rápida", text: "Atención el mismo día" },
+            { icon: Zap, title: "Urgencias 24hs", text: "Reparación en el día" },
           ].map((b, i) => (
             <div key={i} className="flex items-start gap-4">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl" style={{ background: "var(--gradient-sky)" }}>
