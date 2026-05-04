@@ -212,29 +212,16 @@ function Index() {
         </div>
       </section>
 
-      {/* RESEÑAS */}
-      <section className="py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center mb-14">
-            <div className="inline-block px-4 py-1 rounded-full text-sm font-semibold mb-4" style={{ backgroundColor: "var(--brand-light)", color: "var(--brand-deep)" }}>
-              TESTIMONIOS
-            </div>
-            <h2 className="text-3xl md:text-5xl font-black text-foreground">Lo que dicen nuestros clientes</h2>
-          </div>
-          <ReviewsCarousel />
-        </div>
-      </section>
-
       {/* ZONA DE COBERTURA */}
       <section className="py-20 bg-muted">
         <div className="mx-auto max-w-5xl px-6 text-center">
           <MapPin className="mx-auto h-12 w-12 mb-4" style={{ color: "var(--brand-primary)" }} />
           <h2 className="text-3xl md:text-4xl font-black text-foreground">Zona de cobertura</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Visita técnica <strong className="text-foreground">sin cargo</strong> en Lanús y alrededores: Avellaneda, Banfield, Lomas de Zamora, Remedios de Escalada, Valentín Alsina, Gerli y zonas vecinas.
+            Visita técnica <strong className="text-foreground">sin cargo</strong> en Lanús, Avellaneda, Lomas de Zamora y toda la zona sur del GBA.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-2">
-            {["Lanús", "Lanús Oeste", "Avellaneda", "Banfield", "Lomas de Zamora", "Remedios de Escalada", "Valentín Alsina", "Gerli", "Wilde", "Sarandí"].map((z) => (
+            {["Lanús", "Lanús Oeste", "Lanús Este", "Avellaneda", "Banfield", "Lomas de Zamora", "Remedios de Escalada", "Valentín Alsina", "Gerli", "Wilde", "Sarandí", "Dock Sud", "Piñeyro", "Villa Domínico", "Crucecita", "Monte Chingolo", "Temperley", "Turdera", "Llavallol", "Quilmes", "Bernal", "Ezpeleta", "Don Bosco", "Adrogué", "Burzaco", "Rafael Calzada", "Claypole", "Florencio Varela"].map((z) => (
               <span key={z} className="rounded-full bg-card px-4 py-2 text-sm font-medium text-foreground border border-border shadow-sm">{z}</span>
             ))}
           </div>
