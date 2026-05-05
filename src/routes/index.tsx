@@ -58,7 +58,7 @@ function Index() {
         <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, oklch(0.32 0.16 255 / 0.88) 0%, oklch(0.45 0.18 240 / 0.78) 60%, oklch(0.32 0.16 255 / 0.85) 100%)" }} />
         <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, transparent 0%, oklch(0.25 0.14 255 / 0.5) 100%)" }} />
 
-        <div className="relative mx-auto max-w-7xl px-6 py-20 md:py-32">
+        <div className="relative mx-auto max-w-7xl px-6 py-8 md:py-20 lg:py-28">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div className="text-white">
               <div className="flex flex-wrap gap-2 mb-6">
