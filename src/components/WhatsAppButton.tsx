@@ -1,6 +1,6 @@
 import { MessageCircle } from "lucide-react";
 
-const PHONE = "5491100000000"; // reemplazar con tu número
+const PHONE = "5491164253686";
 const MESSAGE = "Hola! Me interesa solicitar una visita para reparación.";
 
 export const whatsappLink = `https://wa.me/${PHONE}?text=${encodeURIComponent(MESSAGE)}`;
