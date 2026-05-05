@@ -34,7 +34,7 @@ function Index() {
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-border shadow-sm">
         <div className="mx-auto max-w-7xl px-4 md:px-6 py-3 flex items-center justify-between gap-4">
           <a href="/" className="flex items-center gap-3">
-            <img src={logoImg} alt="Reparaciones Ezequiel — Comercial y Familiar" className="h-12 md:h-14 w-auto" width={200} height={200} />
+            <img src={logoImg} alt="Reparaciones Ezequiel — Comercial y Familiar" className="h-16 md:h-20 w-auto" width={240} height={240} />)
           </a>
           <a
             href={whatsappLink}
