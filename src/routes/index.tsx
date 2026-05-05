@@ -8,6 +8,7 @@ import antes1 from "@/assets/antes-1.jpg";
 import despues1 from "@/assets/despues-1.jpg";
 import antes2 from "@/assets/antes-2.jpg";
 import despues2 from "@/assets/despues-2.jpg";
+import logoImg from "@/assets/logo.png";
 import { WhatsAppFloating, whatsappLink } from "@/components/WhatsAppButton";
 import { BeforeAfter } from "@/components/BeforeAfter";
 import { ReviewsCarousel } from "@/components/ReviewsCarousel";
@@ -29,13 +30,33 @@ function Index() {
     <main className="min-h-screen bg-background">
       <WhatsAppFloating />
 
+      {/* HEADER */}
+      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-border shadow-sm">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 py-3 flex items-center justify-between gap-4">
+          <a href="/" className="flex items-center gap-3">
+            <img src={logoImg} alt="Reparaciones Ezequiel — Comercial y Familiar" className="h-12 md:h-14 w-auto" width={200} height={200} />
+          </a>
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full px-4 py-2 md:px-5 md:py-2.5 text-sm font-bold text-white shadow-md transition-[var(--transition-smooth)] hover:scale-105"
+            style={{ backgroundColor: "var(--whatsapp)" }}
+          >
+            <Phone className="h-4 w-4" />
+            <span className="hidden sm:inline">Pedí tu visita</span>
+            <span className="sm:hidden">WhatsApp</span>
+          </a>
+        </div>
+      </header>
+
       {/* HERO */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0">
           <img src={heroImg} alt="" className="h-full w-full object-cover" width={1536} height={1024} />
         </div>
-        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, transparent 0%, oklch(0.32 0.16 255 / 0.4) 100%)" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, oklch(0.32 0.16 255 / 0.88) 0%, oklch(0.45 0.18 240 / 0.78) 60%, oklch(0.32 0.16 255 / 0.85) 100%)" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, transparent 0%, oklch(0.25 0.14 255 / 0.5) 100%)" }} />
 
         <div className="relative mx-auto max-w-7xl px-6 py-20 md:py-32">
           <div className="grid items-center gap-12 lg:grid-cols-2">
