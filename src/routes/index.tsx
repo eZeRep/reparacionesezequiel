@@ -117,8 +117,32 @@ function Index() {
         </div>
       </section>
 
-      {/* RESEÑAS (justo después del hero) */}
+      {/* ANTES Y DESPUÉS (justo después del hero) */}
       <section className="py-16 md:py-20 bg-muted">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="text-center mb-10">
+            <div className="inline-block px-4 py-1 rounded-full text-sm font-semibold mb-4" style={{ backgroundColor: "var(--brand-light)", color: "var(--brand-deep)" }}>
+              NUESTRO TRABAJO
+            </div>
+            <h2 className="text-3xl md:text-5xl font-black text-foreground">Antes y después</h2>
+            <p className="mt-4 text-lg text-muted-foreground">Arrastrá el control para ver la diferencia</p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
+            <div>
+              <BeforeAfter before={antes1} after={despues1} alt="Compresor de heladera" />
+              <h3 className="mt-4 text-xl font-bold text-foreground text-center">Compresor de heladera</h3>
+            </div>
+            <div>
+              <BeforeAfter before={antes2} after={despues2} alt="Tambor de lavarropas" />
+              <h3 className="mt-4 text-xl font-bold text-foreground text-center">Tambor de lavarropas</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* RESEÑAS */}
+      <section className="py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="text-center mb-10">
             <div className="inline-block px-4 py-1 rounded-full text-sm font-semibold mb-4" style={{ backgroundColor: "var(--brand-light)", color: "var(--brand-deep)" }}>
@@ -209,30 +233,6 @@ function Index() {
           >
             <Phone className="h-6 w-6" /> Pedí tu visita sin costo
           </a>
-        </div>
-      </section>
-
-      {/* ANTES Y DESPUÉS */}
-      <section className="py-20 md:py-28 bg-muted">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center mb-14">
-            <div className="inline-block px-4 py-1 rounded-full text-sm font-semibold mb-4" style={{ backgroundColor: "var(--brand-light)", color: "var(--brand-deep)" }}>
-              NUESTRO TRABAJO
-            </div>
-            <h2 className="text-3xl md:text-5xl font-black text-foreground">Antes y después</h2>
-            <p className="mt-4 text-lg text-muted-foreground">Arrastrá el control para ver la diferencia</p>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
-            <div>
-              <BeforeAfter before={antes1} after={despues1} alt="Compresor de heladera" />
-              <h3 className="mt-4 text-xl font-bold text-foreground text-center">Compresor de heladera</h3>
-            </div>
-            <div>
-              <BeforeAfter before={antes2} after={despues2} alt="Tambor de lavarropas" />
-              <h3 className="mt-4 text-xl font-bold text-foreground text-center">Tambor de lavarropas</h3>
-            </div>
-          </div>
         </div>
       </section>
 
