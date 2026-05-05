@@ -1,17 +1,15 @@
 import { useEffect, useState } from "react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import c1 from "@/assets/cliente-1.jpg";
-import c2 from "@/assets/cliente-2.jpg";
 import c3 from "@/assets/cliente-3.jpg";
-import c4 from "@/assets/cliente-4.jpg";
 import c5 from "@/assets/cliente-5.jpg";
+import c4 from "@/assets/cliente-4.jpg";
 
 const reviews = [
   { name: "María González", location: "Lanús", photo: c1, text: "Excelente servicio. Vinieron el mismo día, diagnosticaron rápido y me arreglaron la heladera por mucho menos de lo que pensaba. Súper recomendable.", rating: 5 },
-  { name: "Carlos Pérez", location: "Avellaneda", photo: c2, text: "Tengo un kiosco y se me rompió la exhibidora. En 2 horas estaba funcionando de nuevo. Profesionales en serio.", rating: 5 },
   { name: "Lucía Fernández", location: "Banfield", photo: c3, text: "Mi lavarropas hacía un ruido horrible. Lo dejaron como nuevo y con 3 meses de garantía. Gente honesta y trabajadora.", rating: 5 },
-  { name: "Roberto Sánchez", location: "Lomas de Zamora", photo: c4, text: "Reparó la cámara de frío de mi carnicería el mismo día que llamé. Atención impecable y precio justo. Ya es mi técnico de confianza.", rating: 5 },
   { name: "Ana Martínez", location: "Lanús Oeste", photo: c5, text: "Visita sin cargo, me explicó todo con paciencia y arregló la heladera en el momento. 20 años de experiencia se notan.", rating: 5 },
+  { name: "Roberto Sánchez", location: "Lomas de Zamora", photo: c4, text: "Reparó la cámara de frío de mi carnicería el mismo día que llamé. Atención impecable y precio justo. Ya es mi técnico de confianza.", rating: 5 },
 ];
 
 export function ReviewsCarousel() {
