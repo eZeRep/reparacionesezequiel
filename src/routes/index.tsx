@@ -123,6 +123,30 @@ function Index() {
         </div>
       </section>
 
+      {/* PRUEBA SOCIAL — Google */}
+      <section className="py-10 md:py-12 bg-card border-b border-border">
+        <div className="mx-auto max-w-4xl px-6 text-center">
+          <div className="flex justify-center gap-1 mb-3" aria-label="5 estrellas">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="h-7 w-7 fill-yellow-400 text-yellow-400" />
+            ))}
+          </div>
+          <p className="text-xl md:text-2xl font-extrabold text-foreground">
+            Más de 100 clientes satisfechos en Zona Sur
+          </p>
+          <p className="mt-2 text-muted-foreground">Lanús, Lomas, Banfield, Avellaneda y alrededores</p>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-flex items-center gap-2 rounded-full px-6 py-3 font-bold text-white shadow-md transition-[var(--transition-smooth)] hover:scale-105"
+            style={{ background: "var(--gradient-cta)" }}
+          >
+            <Star className="h-5 w-5 fill-current" /> Ver opiniones en Google
+          </a>
+        </div>
+      </section>
+
       {/* ANTES Y DESPUÉS (justo después del hero) */}
       <section className="py-16 md:py-20 bg-muted">
         <div className="mx-auto max-w-7xl px-6">
