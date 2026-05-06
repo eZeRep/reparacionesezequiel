@@ -330,7 +330,7 @@ function Index() {
           <MapPin className="mx-auto h-12 w-12 mb-4" style={{ color: "var(--brand-primary)" }} />
           <h2 className="text-3xl md:text-4xl font-black text-foreground">Zona de cobertura</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Visita técnica <strong className="text-foreground">sin cargo</strong> en Lanús, Avellaneda, Lomas de Zamora y toda la zona sur del GBA.
+            Visita técnica <strong className="text-foreground">sin cargo</strong> en Zona Sur (Lanús, Lomas, Banfield, Avellaneda y alrededores) y todo el GBA Sur.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-2">
             {["Lanús", "Lanús Oeste", "Lanús Este", "Avellaneda", "Banfield", "Lomas de Zamora", "Remedios de Escalada", "Valentín Alsina", "Gerli", "Wilde", "Sarandí", "Dock Sud", "Piñeyro", "Villa Domínico", "Crucecita", "Monte Chingolo", "Temperley", "Turdera", "Llavallol", "Quilmes", "Bernal", "Ezpeleta", "Don Bosco", "Adrogué", "Burzaco", "Rafael Calzada", "Claypole", "Florencio Varela"].map((z) => (
