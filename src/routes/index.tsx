@@ -8,7 +8,7 @@ import antes1 from "@/assets/antes-1.jpg";
 import despues1 from "@/assets/despues-1.jpg";
 import antes2 from "@/assets/antes-2.jpg";
 import despues2 from "@/assets/despues-2.jpg";
-import logoImg from "@/assets/logo.png";
+import logoImg from "@/assets/logo.jpg";
 import { WhatsAppFloating, whatsappLink } from "@/components/WhatsAppButton";
 import { BeforeAfter } from "@/components/BeforeAfter";
 import { ReviewsCarousel } from "@/components/ReviewsCarousel";
@@ -34,7 +34,7 @@ function Index() {
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-border shadow-sm">
         <div className="mx-auto max-w-7xl px-4 md:px-6 py-2 flex items-center justify-between gap-4">
           <a href="/" className="flex items-center">
-            <img src={logoImg} alt="Reparaciones Ezequiel — Comercial y Familiar" className="h-20 md:h-24 w-auto object-contain" width={320} height={320} />
+            <img src={logoImg} alt="Reparaciones Ezequiel — Comercial y Familiar" className="h-20 md:h-24 w-auto object-contain text-2xl" width={320} height={320} />
           </a>
           <a
             href={whatsappLink}
@@ -193,7 +193,7 @@ function Index() {
             {[
               { img: heroImg, icon: Snowflake, title: "Heladeras familiares", text: "Reparación de heladeras de todas las marcas y modelos. Cambio de gas, motor, termostato y más." },
               { img: heladeraComercial, icon: Snowflake, title: "Heladeras comerciales", text: "Exhibidoras, cámaras de frío, freezers comerciales. Servicio para comercios y gastronomía." },
-              { img: lavarropasImg, icon: Wrench, title: "Lavarropas y bateas", text: "Reparación de lavarropas automáticos y bateas. Cambio de bomba, plaqueta, rulemanes." },
+              { img: lavarropasImg, icon: Wrench, title: "Reparación de lavarropas automáticos. Cambio de bomba, plaqueta, rulemanes.", text: "Reparación de lavarropas automáticos y bateas. Cambio de bomba, plaqueta, rulemanes." },
               { img: cavaImg, icon: Snowflake, title: "Cavas de vino", text: "Mantenimiento y reparación de cavas climatizadas. Control de temperatura y humedad." },
               { img: heladeraComercial, icon: Snowflake, title: "Cámaras de frío", text: "Instalación y reparación de cámaras frigoríficas para carnicerías, verdulerías y depósitos." },
               { img: heladeraComercial, icon: Snowflake, title: "Exhibidoras", text: "Service de exhibidoras refrigeradas para kioscos, almacenes y supermercados." },
