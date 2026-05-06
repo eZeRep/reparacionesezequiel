@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Snowflake, Wrench, ShieldCheck, Clock, MapPin, Award, Phone, CheckCircle2, Sparkles, Zap } from "lucide-react";
+import { Snowflake, Wrench, ShieldCheck, Clock, MapPin, Award, Phone, CheckCircle2, Sparkles, Zap, Star, ThumbsUp, User } from "lucide-react";
 import heroImg from "@/assets/hero-tecnico.jpg";
 import heladeraComercial from "@/assets/heladera-comercial.png";
 import camaraFrioImg from "@/assets/camara-frio.jpg";
