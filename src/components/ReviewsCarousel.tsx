@@ -10,6 +10,7 @@ const reviews = [
   { name: "Lucía Fernández", location: "Banfield", photo: c3, text: "Mi lavarropas hacía un ruido horrible. Lo dejaron como nuevo y con 3 meses de garantía. Gente honesta y trabajadora.", rating: 5 },
   { name: "Ana Martínez", location: "Lanús Oeste", photo: c5, text: "Visita sin cargo, me explicó todo con paciencia y arregló la heladera en el momento. 20 años de experiencia se notan.", rating: 5 },
   { name: "Roberto Sánchez", location: "Lomas de Zamora", photo: c4, text: "Reparó la cámara de frío de mi carnicería el mismo día que llamé. Atención impecable y precio justo. Ya es mi técnico de confianza.", rating: 5 },
+  { name: "Diego Pereyra", location: "Avellaneda", photo: c1, text: "Me dijo de entrada que no convenía reparar el equipo viejo y me ahorró plata. Gente honesta, sin vueltas. Volví a llamarlo para otra heladera y todo perfecto.", rating: 5 },
 ];
 
 export function ReviewsCarousel() {

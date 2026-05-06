@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Snowflake, Wrench, ShieldCheck, Clock, MapPin, Award, Phone, CheckCircle2, Sparkles, Zap } from "lucide-react";
+import { Snowflake, Wrench, ShieldCheck, Clock, MapPin, Award, Phone, CheckCircle2, Sparkles, Zap, Star, ThumbsUp, User } from "lucide-react";
 import heroImg from "@/assets/hero-tecnico.jpg";
 import heladeraComercial from "@/assets/heladera-comercial.png";
 import camaraFrioImg from "@/assets/camara-frio.jpg";
@@ -73,14 +73,18 @@ function Index() {
                   URGENCIAS · Reparación en el día
                 </div>
               </div>
+              <div className="inline-flex items-center gap-2 rounded-2xl px-4 py-2 mb-4 text-base md:text-lg font-extrabold shadow-lg" style={{ backgroundColor: "oklch(0.85 0.18 95)", color: "oklch(0.25 0.14 255)" }}>
+                <CheckCircle2 className="h-5 w-5" />
+                VISITA SIN COSTO en Lanús y alrededores
+              </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight">
                 Visita sin costo en<br/>
                 <span style={{ background: "linear-gradient(90deg, oklch(0.92 0.06 225), oklch(0.78 0.13 230))", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-                  Lanus y alrededores
+                  Lanús y alrededores
                 </span>
               </h1>
               <p className="mt-6 text-lg md:text-xl text-white/90 max-w-xl leading-relaxed">
-                Reparamos heladeras familiares y comerciales, lavarropas, bateas, exhibidoras, cámaras de frío y cavas de vino. Servicio técnico profesional con garantía.
+                Reparamos heladeras familiares y comerciales, lavarropas, bateas, exhibidoras, cámaras de frío y cavas de vino en Zona Sur (Lanús, Lomas, Banfield, Avellaneda y alrededores). Servicio técnico profesional con garantía.
               </p>
 
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -92,13 +96,13 @@ function Index() {
                   style={{ backgroundColor: "var(--whatsapp)" }}
                 >
                   <svg viewBox="0 0 24 24" className="h-6 w-6 fill-current"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                  Pedí tu visita sin cargo
+                  Pedí tu visita sin cargo ahora
                 </a>
                 <a
                   href="#servicios"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 backdrop-blur border-2 border-white/30 px-8 py-4 text-lg font-semibold text-white transition-[var(--transition-smooth)] hover:bg-white/20"
                 >
-                  Ver servicios
+                  Ver qué reparamos
                 </a>
               </div>
 
@@ -116,6 +120,30 @@ function Index() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* PRUEBA SOCIAL — Google */}
+      <section className="py-10 md:py-12 bg-card border-b border-border">
+        <div className="mx-auto max-w-4xl px-6 text-center">
+          <div className="flex justify-center gap-1 mb-3" aria-label="5 estrellas">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="h-7 w-7 fill-yellow-400 text-yellow-400" />
+            ))}
+          </div>
+          <p className="text-xl md:text-2xl font-extrabold text-foreground">
+            Más de 100 clientes satisfechos en Zona Sur
+          </p>
+          <p className="mt-2 text-muted-foreground">Lanús, Lomas, Banfield, Avellaneda y alrededores</p>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-flex items-center gap-2 rounded-full px-6 py-3 font-bold text-white shadow-md transition-[var(--transition-smooth)] hover:scale-105"
+            style={{ background: "var(--gradient-cta)" }}
+          >
+            <Star className="h-5 w-5 fill-current" /> Ver opiniones en Google
+          </a>
         </div>
       </section>
 
@@ -178,6 +206,29 @@ function Index() {
         </div>
       </section>
 
+      {/* ANTI-DESCONFIANZA */}
+      <section className="py-12 md:py-16 bg-background">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="rounded-3xl p-8 md:p-10 border-2 shadow-[var(--shadow-soft)]" style={{ borderColor: "var(--brand-light)", background: "var(--gradient-sky)" }}>
+            <h2 className="text-2xl md:text-3xl font-black text-center mb-6" style={{ color: "var(--brand-deep)" }}>
+              Trabajamos con honestidad
+            </h2>
+            <div className="grid gap-4 md:grid-cols-3">
+              {[
+                "Diagnóstico sin compromiso",
+                "Si no conviene reparar, te lo decimos",
+                "Sin sobreprecios ni vueltas",
+              ].map((t, i) => (
+                <div key={i} className="flex items-start gap-3 bg-card rounded-2xl p-5 shadow-sm">
+                  <CheckCircle2 className="h-6 w-6 shrink-0" style={{ color: "var(--brand-primary)" }} />
+                  <span className="font-semibold text-foreground">{t}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SERVICIOS */}
       <section id="servicios" className="py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-6">
@@ -217,6 +268,41 @@ function Index() {
         </div>
       </section>
 
+      {/* SOBRE NOSOTROS */}
+      <section id="sobre-nosotros" className="py-16 md:py-20 bg-muted">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="text-center mb-10">
+            <div className="inline-block px-4 py-1 rounded-full text-sm font-semibold mb-4" style={{ backgroundColor: "var(--brand-light)", color: "var(--brand-deep)" }}>
+              SOBRE NOSOTROS
+            </div>
+            <h2 className="text-3xl md:text-4xl font-black text-foreground">Tu técnico de confianza en Zona Sur</h2>
+          </div>
+          <div className="grid items-center gap-8 md:grid-cols-[260px_1fr]">
+            {/* Espacio para foto del técnico — reemplazar src cuando esté la foto */}
+            <div className="mx-auto w-full max-w-[260px] aspect-square rounded-3xl border-2 border-dashed flex items-center justify-center bg-card shadow-[var(--shadow-soft)]" style={{ borderColor: "var(--brand-light)" }}>
+              <div className="text-center px-4">
+                <User className="h-16 w-16 mx-auto mb-2" style={{ color: "var(--brand-primary)" }} />
+                <p className="text-sm text-muted-foreground">Foto del técnico</p>
+              </div>
+            </div>
+            <div>
+              <p className="text-lg md:text-xl text-foreground leading-relaxed">
+                Soy <strong>Ezequiel</strong>, técnico con más de <strong>20 años de experiencia</strong> en reparación de electrodomésticos en Zona Sur (Lanús, Lomas, Banfield, Avellaneda y alrededores). Trabajo de forma directa, sin intermediarios, garantizando cada reparación.
+              </p>
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-2 rounded-full px-6 py-3 font-bold text-white shadow-md transition-[var(--transition-smooth)] hover:scale-105"
+                style={{ backgroundColor: "var(--whatsapp)" }}
+              >
+                <Phone className="h-5 w-5" /> Hablá directo conmigo
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA INTERMEDIO */}
       <section className="relative py-16 overflow-hidden">
         <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
@@ -225,7 +311,7 @@ function Index() {
             <Zap className="h-4 w-4 fill-current" /> ATENCIÓN DE URGENCIAS
           </div>
           <h2 className="text-3xl md:text-5xl font-black">¿Tu equipo no funciona?</h2>
-          <p className="mt-4 text-lg md:text-xl text-white/90">Escribinos por WhatsApp y coordinamos una visita sin cargo. Reparamos en el día.</p>
+          <p className="mt-4 text-lg md:text-xl text-white/90">Escribinos por WhatsApp y coordinamos una visita sin cargo en Zona Sur (Lanús, Lomas, Banfield, Avellaneda y alrededores). Reparamos en el día.</p>
           <a
             href={whatsappLink}
             target="_blank"
@@ -244,7 +330,7 @@ function Index() {
           <MapPin className="mx-auto h-12 w-12 mb-4" style={{ color: "var(--brand-primary)" }} />
           <h2 className="text-3xl md:text-4xl font-black text-foreground">Zona de cobertura</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Visita técnica <strong className="text-foreground">sin cargo</strong> en Lanús, Avellaneda, Lomas de Zamora y toda la zona sur del GBA.
+            Visita técnica <strong className="text-foreground">sin cargo</strong> en Zona Sur (Lanús, Lomas, Banfield, Avellaneda y alrededores) y todo el GBA Sur.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-2">
             {["Lanús", "Lanús Oeste", "Lanús Este", "Avellaneda", "Banfield", "Lomas de Zamora", "Remedios de Escalada", "Valentín Alsina", "Gerli", "Wilde", "Sarandí", "Dock Sud", "Piñeyro", "Villa Domínico", "Crucecita", "Monte Chingolo", "Temperley", "Turdera", "Llavallol", "Quilmes", "Bernal", "Ezpeleta", "Don Bosco", "Adrogué", "Burzaco", "Rafael Calzada", "Claypole", "Florencio Varela"].map((z) => (
