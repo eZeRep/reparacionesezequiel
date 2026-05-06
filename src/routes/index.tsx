@@ -268,6 +268,41 @@ function Index() {
         </div>
       </section>
 
+      {/* SOBRE NOSOTROS */}
+      <section id="sobre-nosotros" className="py-16 md:py-20 bg-muted">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="text-center mb-10">
+            <div className="inline-block px-4 py-1 rounded-full text-sm font-semibold mb-4" style={{ backgroundColor: "var(--brand-light)", color: "var(--brand-deep)" }}>
+              SOBRE NOSOTROS
+            </div>
+            <h2 className="text-3xl md:text-4xl font-black text-foreground">Tu técnico de confianza en Zona Sur</h2>
+          </div>
+          <div className="grid items-center gap-8 md:grid-cols-[260px_1fr]">
+            {/* Espacio para foto del técnico — reemplazar src cuando esté la foto */}
+            <div className="mx-auto w-full max-w-[260px] aspect-square rounded-3xl border-2 border-dashed flex items-center justify-center bg-card shadow-[var(--shadow-soft)]" style={{ borderColor: "var(--brand-light)" }}>
+              <div className="text-center px-4">
+                <User className="h-16 w-16 mx-auto mb-2" style={{ color: "var(--brand-primary)" }} />
+                <p className="text-sm text-muted-foreground">Foto del técnico</p>
+              </div>
+            </div>
+            <div>
+              <p className="text-lg md:text-xl text-foreground leading-relaxed">
+                Soy <strong>Ezequiel</strong>, técnico con más de <strong>20 años de experiencia</strong> en reparación de electrodomésticos en Zona Sur (Lanús, Lomas, Banfield, Avellaneda y alrededores). Trabajo de forma directa, sin intermediarios, garantizando cada reparación.
+              </p>
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-2 rounded-full px-6 py-3 font-bold text-white shadow-md transition-[var(--transition-smooth)] hover:scale-105"
+                style={{ backgroundColor: "var(--whatsapp)" }}
+              >
+                <Phone className="h-5 w-5" /> Hablá directo conmigo
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA INTERMEDIO */}
       <section className="relative py-16 overflow-hidden">
         <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
@@ -276,7 +311,7 @@ function Index() {
             <Zap className="h-4 w-4 fill-current" /> ATENCIÓN DE URGENCIAS
           </div>
           <h2 className="text-3xl md:text-5xl font-black">¿Tu equipo no funciona?</h2>
-          <p className="mt-4 text-lg md:text-xl text-white/90">Escribinos por WhatsApp y coordinamos una visita sin cargo. Reparamos en el día.</p>
+          <p className="mt-4 text-lg md:text-xl text-white/90">Escribinos por WhatsApp y coordinamos una visita sin cargo en Zona Sur (Lanús, Lomas, Banfield, Avellaneda y alrededores). Reparamos en el día.</p>
           <a
             href={whatsappLink}
             target="_blank"
