@@ -73,14 +73,14 @@ function Index() {
                   URGENCIAS · Reparación en el día
                 </div>
               </div>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight">
-                Reparación de<br/>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight">
+                Visita sin costo en<br/>
                 <span style={{ background: "linear-gradient(90deg, oklch(0.92 0.06 225), oklch(0.78 0.13 230))", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-                  electrodomésticos
+                  Lanus y alrededores
                 </span>
               </h1>
               <p className="mt-6 text-lg md:text-xl text-white/90 max-w-xl leading-relaxed">
-                Heladeras familiares y comerciales, lavarropas, bateas, exhibidoras, cámaras de frío y cavas de vino. Servicio técnico profesional con garantía.
+                Reparamos heladeras familiares y comerciales, lavarropas, bateas, exhibidoras, cámaras de frío y cavas de vino. Servicio técnico profesional con garantía.
               </p>
 
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -260,7 +260,7 @@ function Index() {
         <div className="relative mx-auto max-w-7xl px-6 grid gap-10 md:grid-cols-3">
           <div>
             <h3 className="text-2xl font-black mb-3">Servicio Técnico</h3>
-            <p className="text-white/80">Más de 20 años reparando los electrodomésticos de tu casa y tu comercio.</p>
+            <p className="text-white/80">Más de 20 años reparando heladeras, lavarropas y equipos comerciales en tu zona.</p>
           </div>
           <div>
             <h4 className="font-bold mb-3">Contacto</h4>
