@@ -8,7 +8,7 @@ import antes1 from "@/assets/antes-1.jpg";
 import despues1 from "@/assets/despues-1.jpg";
 import antes2 from "@/assets/antes-2.jpg";
 import despues2 from "@/assets/despues-2.jpg";
-import logoImg from "@/assets/logo.jpg";
+import logoImg from "@/assets/logo.png";
 import { WhatsAppFloating, whatsappLink } from "@/components/WhatsAppButton";
 import { BeforeAfter } from "@/components/BeforeAfter";
 import { ReviewsCarousel } from "@/components/ReviewsCarousel";
