@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Snowflake, Wrench, ShieldCheck, Clock, MapPin, Award, Phone, CheckCircle2, Sparkles, Zap } from "lucide-react";
 import heroImg from "@/assets/hero-tecnico.jpg";
 import heladeraComercial from "@/assets/heladera-comercial.png";
+import camaraFrioImg from "@/assets/camara-frio.jpg";
+import exhibidoraImg from "@/assets/exhibidora.jpg";
 import lavarropasImg from "@/assets/lavarropas.jpg";
 import cavaImg from "@/assets/cava-vinos.jpg";
 import antes1 from "@/assets/antes-1.jpg";
@@ -195,8 +197,8 @@ function Index() {
               { img: heladeraComercial, icon: Snowflake, title: "Heladeras comerciales", text: "Exhibidoras, cámaras de frío, freezers comerciales. Servicio para comercios y gastronomía." },
               { img: lavarropasImg, icon: Wrench, title: "Reparación de lavarropas automáticos. Cambio de bomba, plaqueta, rulemanes.", text: "Reparación de lavarropas automáticos y bateas. Cambio de bomba, plaqueta, rulemanes." },
               { img: cavaImg, icon: Snowflake, title: "Cavas de vino", text: "Mantenimiento y reparación de cavas climatizadas. Control de temperatura y humedad." },
-              { img: heladeraComercial, icon: Snowflake, title: "Cámaras de frío", text: "Instalación y reparación de cámaras frigoríficas para carnicerías, verdulerías y depósitos." },
-              { img: heladeraComercial, icon: Snowflake, title: "Exhibidoras", text: "Service de exhibidoras refrigeradas para kioscos, almacenes y supermercados." },
+              { img: camaraFrioImg, icon: Snowflake, title: "Cámaras de frío", text: "Instalación y reparación de cámaras frigoríficas para carnicerías, verdulerías y depósitos." },
+              { img: exhibidoraImg, icon: Snowflake, title: "Exhibidoras", text: "Service de exhibidoras refrigeradas para kioscos, almacenes y supermercados." },
             ].map((s, i) => (
               <article key={i} className="group overflow-hidden rounded-2xl bg-card shadow-[var(--shadow-soft)] transition-[var(--transition-smooth)] hover:shadow-[var(--shadow-elegant)] hover:-translate-y-1">
                 <div className="relative h-48 overflow-hidden">
