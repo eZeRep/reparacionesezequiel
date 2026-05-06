@@ -260,7 +260,7 @@ function Index() {
         <div className="relative mx-auto max-w-7xl px-6 grid gap-10 md:grid-cols-3">
           <div>
             <h3 className="text-2xl font-black mb-3">Servicio Técnico</h3>
-            <p className="text-white/80">Más de 20 años reparando los electrodomésticos de tu casa y tu comercio.</p>
+            <p className="text-white/80">Más de 20 años reparando heladeras, lavarropas y equipos comerciales en tu zona.</p>
           </div>
           <div>
             <h4 className="font-bold mb-3">Contacto</h4>
