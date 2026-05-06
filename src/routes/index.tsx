@@ -206,6 +206,29 @@ function Index() {
         </div>
       </section>
 
+      {/* ANTI-DESCONFIANZA */}
+      <section className="py-12 md:py-16 bg-background">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="rounded-3xl p-8 md:p-10 border-2 shadow-[var(--shadow-soft)]" style={{ borderColor: "var(--brand-light)", background: "var(--gradient-sky)" }}>
+            <h2 className="text-2xl md:text-3xl font-black text-center mb-6" style={{ color: "var(--brand-deep)" }}>
+              Trabajamos con honestidad
+            </h2>
+            <div className="grid gap-4 md:grid-cols-3">
+              {[
+                "Diagnóstico sin compromiso",
+                "Si no conviene reparar, te lo decimos",
+                "Sin sobreprecios ni vueltas",
+              ].map((t, i) => (
+                <div key={i} className="flex items-start gap-3 bg-card rounded-2xl p-5 shadow-sm">
+                  <CheckCircle2 className="h-6 w-6 shrink-0" style={{ color: "var(--brand-primary)" }} />
+                  <span className="font-semibold text-foreground">{t}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SERVICIOS */}
       <section id="servicios" className="py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-6">
