@@ -131,8 +131,8 @@ function Index() {
               <Star key={i} className="h-7 w-7 fill-yellow-400 text-yellow-400" />
             ))}
           </div>
-          <p className="text-lg md:text-xl font-semibold text-foreground max-w-3xl mx-auto">
-            Hace más de 20 años trabajamos reparando heladeras, lavarropas, cámaras de frío, exhibidoras y equipos de refrigeración para hogares y comercios de Zona Sur. Atendemos en Lanús, Lomas de Zamora, Banfield, Avellaneda y alrededores, siempre con trato directo, diagnóstico claro y garantía en cada reparación. Nuestra prioridad es ofrecer soluciones rápidas, honestas y que realmente duren.
+          <p className="text-xl md:text-2xl font-extrabold text-foreground">
+            Servicio técnico verificado en Zona Sur
           </p>
           <a
             href="#"
@@ -286,7 +286,7 @@ function Index() {
             </div>
             <div>
               <p className="text-lg md:text-xl text-foreground leading-relaxed">
-                Hace más de 20 años trabajamos reparando heladeras, lavarropas, cámaras de frío, exhibidoras y equipos de refrigeración para hogares y comercios de Zona Sur. Atendemos en Lanús, Lomas de Zamora, Banfield, Avellaneda y alrededores, siempre con trato directo, diagnóstico claro y garantía en cada reparación. Nuestra prioridad es ofrecer soluciones rápidas, honestas y que realmente duren.
+                Servicio técnico verificado en Zona Sur
               </p>
               <a
                 href={whatsappLink}
