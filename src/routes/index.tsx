@@ -286,7 +286,7 @@ function Index() {
             </div>
             <div>
               <p className="text-lg md:text-xl text-foreground leading-relaxed">
-                Soy <strong>Ezequiel</strong>, técnico con más de <strong>20 años de experiencia</strong> en reparación de electrodomésticos en Zona Sur. Trabajo de forma directa, sin intermediarios, garantizando cada reparación.
+                Hace más de 20 años trabajamos reparando heladeras, lavarropas, cámaras de frío, exhibidoras y equipos de refrigeración para hogares y comercios de Zona Sur. Atendemos en Lanús, Lomas de Zamora, Banfield, Avellaneda y alrededores, siempre con trato directo, diagnóstico claro y garantía en cada reparación. Nuestra prioridad es ofrecer soluciones rápidas, honestas y que realmente duren.
               </p>
               <a
                 href={whatsappLink}
