@@ -11,6 +11,7 @@ import despues1 from "@/assets/despues-1.jpg";
 import antes2 from "@/assets/antes-2.jpg";
 import despues2 from "@/assets/despues-2.jpg";
 import logoImg from "@/assets/logo.png";
+import tecnicoImg from "@/assets/tecnico.png";
 import { WhatsAppFloating, whatsappLink } from "@/components/WhatsAppButton";
 import { BeforeAfter } from "@/components/BeforeAfter";
 import { ReviewsCarousel } from "@/components/ReviewsCarousel";
@@ -278,11 +279,8 @@ function Index() {
           </div>
           <div className="grid items-center gap-8 md:grid-cols-[260px_1fr]">
             {/* Espacio para foto del técnico — reemplazar src cuando esté la foto */}
-            <div className="mx-auto w-full max-w-[260px] aspect-square rounded-3xl border-2 border-dashed flex items-center justify-center bg-card shadow-[var(--shadow-soft)]" style={{ borderColor: "var(--brand-light)" }}>
-              <div className="text-center px-4">
-                <User className="h-16 w-16 mx-auto mb-2" style={{ color: "var(--brand-primary)" }} />
-                <p className="text-sm text-muted-foreground">Foto del técnico</p>
-              </div>
+            <div className="mx-auto w-full max-w-[260px] aspect-square rounded-3xl overflow-hidden bg-card shadow-[var(--shadow-soft)]">
+              <img src={tecnicoImg} alt="Reparaciones Ezequiel - Servicio técnico de electrodomésticos" className="h-full w-full object-cover" loading="lazy" />
             </div>
             <div>
               <p className="text-lg md:text-xl text-foreground leading-relaxed">
