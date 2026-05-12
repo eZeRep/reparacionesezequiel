@@ -82,6 +82,7 @@ function Index() {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick("header")}
             className="inline-flex items-center gap-2 rounded-full px-4 py-2 md:px-5 md:py-2.5 text-sm font-bold text-white shadow-md transition-[var(--transition-smooth)] hover:scale-105"
             style={{ backgroundColor: "var(--whatsapp)" }}
           >
@@ -132,6 +133,7 @@ function Index() {
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick("hero")}
                   className="inline-flex items-center justify-center gap-3 rounded-full px-8 py-4 text-lg font-bold text-white shadow-[var(--shadow-elegant)] transition-[var(--transition-bounce)] hover:scale-105"
                   style={{ backgroundColor: "var(--whatsapp)" }}
                 >
@@ -329,6 +331,7 @@ function Index() {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackWhatsAppClick("about")}
                 className="mt-6 inline-flex items-center gap-2 rounded-full px-6 py-3 font-bold text-white shadow-md transition-[var(--transition-smooth)] hover:scale-105"
                 style={{ backgroundColor: "var(--whatsapp)" }}
               >
@@ -352,6 +355,7 @@ function Index() {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick("cta_intermedio")}
             className="mt-8 inline-flex items-center gap-3 rounded-full px-10 py-5 text-lg font-bold text-white shadow-[var(--shadow-elegant)] transition-[var(--transition-bounce)] hover:scale-105"
             style={{ backgroundColor: "var(--whatsapp)" }}
           >
@@ -398,6 +402,7 @@ function Index() {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick("footer")}
               className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold text-white shadow-lg transition-[var(--transition-smooth)] hover:scale-105"
               style={{ backgroundColor: "var(--whatsapp)" }}
             >
