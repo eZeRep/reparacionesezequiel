@@ -136,7 +136,7 @@ function Index() {
             Servicio técnico verificado en Zona Sur
           </p>
           <a
-            href="#"
+            href="https://www.google.com/maps/place/Reparaciones+Ezequiel/@-34.7426371,-58.3692056,17z/data=!4m6!3m5!1s0x95a32bcd144baef5:0x96e3807838556cc5!8m2!3d-34.7426371!4d-58.3666307!16s%2Fg%2F11fvqt_71l"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-5 inline-flex items-center gap-2 rounded-full px-6 py-3 font-bold text-white shadow-md transition-[var(--transition-smooth)] hover:scale-105"
