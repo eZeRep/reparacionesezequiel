@@ -5,6 +5,21 @@ const MESSAGE = "Hola! Me interesa solicitar una visita para reparación.";
 
 export const whatsappLink = `https://wa.me/${PHONE}?text=${encodeURIComponent(MESSAGE)}`;
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+export function trackWhatsAppClick(location: string) {
+  if (typeof window !== "undefined" && typeof window.gtag === "function") {
+    window.gtag("event", "click_whatsapp", {
+      event_category: "engagement",
+      event_label: location,
+    });
+  }
+}
+
 export function WhatsAppFloating() {
   return (
     <a
@@ -12,6 +27,7 @@ export function WhatsAppFloating() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contactar por WhatsApp"
+      onClick={() => trackWhatsAppClick("floating_button")}
       className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full px-5 py-4 font-semibold text-white shadow-[var(--shadow-elegant)] transition-[var(--transition-bounce)] hover:scale-110"
       style={{ backgroundColor: "var(--whatsapp)" }}
     >
