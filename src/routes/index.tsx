@@ -12,9 +12,42 @@ import antes2 from "@/assets/antes-2.jpg";
 import despues2 from "@/assets/despues-2.jpg";
 import logoImg from "@/assets/logo.png";
 import tecnicoImg from "@/assets/tecnico.png";
-import { WhatsAppFloating, whatsappLink } from "@/components/WhatsAppButton";
+import { WhatsAppFloating, whatsappLink, trackWhatsAppClick } from "@/components/WhatsAppButton";
 import { BeforeAfter } from "@/components/BeforeAfter";
 import { ReviewsCarousel } from "@/components/ReviewsCarousel";
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Reparaciones Ezequiel",
+  description: "Servicio técnico de heladeras familiares y comerciales, lavarropas, exhibidoras, cámaras de frío y cavas de vino en Zona Sur del GBA.",
+  image: "https://reparacionesezequiel.lovable.app/favicon.png",
+  url: "https://reparacionesezequiel.lovable.app",
+  telephone: "+54 9 11 6425-3686",
+  priceRange: "$$",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Lanús",
+    addressRegion: "Buenos Aires",
+    addressCountry: "AR",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: -34.7426371,
+    longitude: -58.3666307,
+  },
+  areaServed: [
+    "Lanús", "Avellaneda", "Banfield", "Lomas de Zamora", "Remedios de Escalada",
+    "Valentín Alsina", "Gerli", "Wilde", "Sarandí", "Temperley", "Quilmes", "Bernal", "Adrogué",
+  ],
+  openingHoursSpecification: [{
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    opens: "08:00",
+    closes: "20:00",
+  }],
+  sameAs: ["https://www.google.com/maps/place/Reparaciones+Ezequiel/@-34.7426371,-58.3692056,17z/data=!4m6!3m5!1s0x95a32bcd144baef5:0x96e3807838556cc5!8m2!3d-34.7426371!4d-58.3666307!16s%2Fg%2F11fvqt_71l"],
+};
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -23,6 +56,12 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Servicio técnico de heladeras familiares y comerciales, lavarropas, exhibidoras, cámaras de frío y cavas de vino. Visita sin cargo en Lanús y alrededores. 3 meses de garantía." },
       { property: "og:title", content: "Reparación de Electrodomésticos en Lanús — Visita sin cargo" },
       { property: "og:description", content: "Más de 20 años reparando heladeras, lavarropas, cámaras de frío y exhibidoras. 3 meses de garantía." },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(localBusinessSchema),
+      },
     ],
   }),
   component: Index,
