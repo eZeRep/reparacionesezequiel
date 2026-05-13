@@ -25,7 +25,7 @@ export function trackWhatsAppClick(location: string) {
 export function WhatsAppFloating() {
   return (
     <a
-      href={whatsappLink}
+      href={whatsappCtaLink}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contactar por WhatsApp"
