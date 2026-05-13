@@ -12,7 +12,7 @@ import antes2 from "@/assets/antes-2.jpg";
 import despues2 from "@/assets/despues-2.jpg";
 import logoImg from "@/assets/logo.png";
 import tecnicoImg from "@/assets/tecnico.png";
-import { WhatsAppFloating, whatsappLink, trackWhatsAppClick } from "@/components/WhatsAppButton";
+import { WhatsAppFloating, whatsappCtaLink, trackWhatsAppClick } from "@/components/WhatsAppButton";
 import { BeforeAfter } from "@/components/BeforeAfter";
 import { ReviewsCarousel } from "@/components/ReviewsCarousel";
 
@@ -79,7 +79,7 @@ function Index() {
             <img src={logoImg} alt="Reparaciones Ezequiel — Comercial y Familiar" className="h-20 md:h-24 w-auto object-contain text-2xl" width={320} height={320} />
           </a>
           <a
-            href={whatsappLink}
+            href={whatsappCtaLink}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackWhatsAppClick("header")}
@@ -130,7 +130,7 @@ function Index() {
 
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <a
-                  href={whatsappLink}
+                  href={whatsappCtaLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackWhatsAppClick("hero")}
@@ -328,7 +328,7 @@ function Index() {
                 Hace más de 20 años trabajamos reparando heladeras, lavarropas, cámaras de frío, exhibidoras y equipos de refrigeración para hogares y comercios de Zona Sur. Atendemos en Lanús, Lomas de Zamora, Banfield, Avellaneda y alrededores, siempre con trato directo, diagnóstico claro y garantía en cada reparación. Nuestra prioridad es ofrecer soluciones rápidas, honestas y que realmente duren.
               </p>
               <a
-                href={whatsappLink}
+                href={whatsappCtaLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackWhatsAppClick("about")}
@@ -352,7 +352,7 @@ function Index() {
           <h2 className="text-3xl md:text-5xl font-black">¿Tu equipo no funciona?</h2>
           <p className="mt-4 text-lg md:text-xl text-white/90">Escribinos por WhatsApp y coordinamos una visita sin cargo en Zona Sur (Lanús, Lomas, Banfield, Avellaneda y alrededores). Reparamos en el día.</p>
           <a
-            href={whatsappLink}
+            href={whatsappCtaLink}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackWhatsAppClick("cta_intermedio")}
@@ -399,7 +399,7 @@ function Index() {
           <div>
             <h4 className="font-bold mb-3">¿Necesitás ayuda?</h4>
             <a
-              href={whatsappLink}
+              href={whatsappCtaLink}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackWhatsAppClick("footer")}
