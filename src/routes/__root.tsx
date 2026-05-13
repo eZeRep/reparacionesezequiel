@@ -59,7 +59,11 @@ export const Route = createRootRoute({
         async: true,
       },
       {
-        children: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-1TFNV7GXKY');`,
+        src: "https://www.googletagmanager.com/gtag/js?id=AW-18156593357",
+        async: true,
+      },
+      {
+        children: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-1TFNV7GXKY');gtag('config', 'AW-18156593357');`,
       },
     ],
   }),

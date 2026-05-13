@@ -4,6 +4,8 @@ const PHONE = "5491164253686";
 const MESSAGE = "Hola! Me interesa solicitar una visita para reparación.";
 
 export const whatsappLink = `https://wa.me/${PHONE}?text=${encodeURIComponent(MESSAGE)}`;
+// CTA link: routes through /gracias para disparar la conversión de Google Ads y luego redirige a WhatsApp
+export const whatsappCtaLink = "/gracias";
 
 declare global {
   interface Window {
@@ -23,7 +25,7 @@ export function trackWhatsAppClick(location: string) {
 export function WhatsAppFloating() {
   return (
     <a
-      href={whatsappLink}
+      href={whatsappCtaLink}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contactar por WhatsApp"
