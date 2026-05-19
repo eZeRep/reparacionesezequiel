@@ -19,6 +19,9 @@ export function trackWhatsAppClick(location: string) {
       event_category: "engagement",
       event_label: location,
     });
+    window.gtag("event", "conversion", {
+      send_to: "AW-18156593357/fT_CCIKqy68cEM3B3tFD",
+    });
   }
 }
 
