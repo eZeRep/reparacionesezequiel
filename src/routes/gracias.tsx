@@ -12,10 +12,22 @@ export const Route = createFileRoute("/gracias")({
     ],
     scripts: [
       {
+        async: true,
+        src: "https://www.googletagmanager.com/gtag/js?id=G-1TFNV7GXKY",
+      },
+      {
+        children: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-1TFNV7GXKY');
+        `,
+      },
+      {
         children: `if (typeof gtag === 'function') { gtag('event', 'conversion', {'send_to': 'AW-18156593357/6NGRCIy5r6scEM3B3tFD'}); }`,
       },
     ],
-  }),
+  }),  // ← ACA TERMINA EL HEAD
   component: Gracias,
 });
 
@@ -34,8 +46,8 @@ function Gracias() {
           <MessageCircle className="h-8 w-8 text-white" />
         </div>
         <h1 className="text-2xl font-bold text-foreground">¡Gracias por contactarnos!</h1>
-        <p className="mt-2 text-muted-foreground">Te estamos redirigiendo a WhatsApp…</p>
-        <a
+        <p className="mt-2 text-muted-foreground">Te estamos redirigiendo a WhatsApp …</p>
+        
           href={whatsappLink}
           className="mt-6 inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-semibold text-white"
           style={{ backgroundColor: "var(--whatsapp)" }}
