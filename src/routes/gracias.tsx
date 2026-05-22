@@ -1,3 +1,6 @@
+Acá va el archivo completo corregido:
+
+```tsx
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { whatsappLink } from "@/components/WhatsAppButton";
@@ -21,32 +24,49 @@ export const Route = createFileRoute("/gracias")({
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-1TFNV7GXKY');
+          gtag('config', 'AW-18156593357');
         `,
       },
-      {
-        children: `if (typeof gtag === 'function') { gtag('event', 'conversion', {'send_to': 'AW-18156593357/6NGRCIy5r6scEM3B3tFD'}); }`,
-      },
     ],
-  }),  // ← ACA TERMINA EL HEAD
+  }),
+
   component: Gracias,
 });
 
 function Gracias() {
   useEffect(() => {
-    const t = setTimeout(() => {
-      window.location.href = whatsappLink;
-    }, 800);
+    // Disparar conversión una vez que el componente está montado y gtag cargado
+    const fireAndRedirect = () => {
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "conversion", {
+          send_to: "AW-18156593357/6NGRCIy5r6scEM3B3tFD",
+        });
+      }
+      setTimeout(() => {
+        window.location.href = whatsappLink;
+      }, 1500);
+    };
+
+    // Pequeño delay para asegurar que gtag.js terminó de cargar
+    const t = setTimeout(fireAndRedirect, 300);
     return () => clearTimeout(t);
   }, []);
 
   return (
     <main className="min-h-screen flex items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full" style={{ backgroundColor: "var(--whatsapp)" }}>
+        <div
+          className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full"
+          style={{ backgroundColor: "var(--whatsapp)" }}
+        >
           <MessageCircle className="h-8 w-8 text-white" />
         </div>
-        <h1 className="text-2xl font-bold text-foreground">¡Gracias por contactarnos!</h1>
-        <p className="mt-2 text-muted-foreground">Te estamos redirigiendo a WhatsApp …</p>
+        <h1 className="text-2xl font-bold text-foreground">
+          ¡Gracias por contactarnos!
+        </h1>
+        <p className="mt-2 text-muted-foreground">
+          Te estamos redirigiendo a WhatsApp …
+        </p>
         
           href={whatsappLink}
           className="mt-6 inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-semibold text-white"
