@@ -1,5 +1,5 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
-
+import { useEffect } from "react";
 import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
@@ -29,42 +29,13 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Appliance Repair Hub is a website for appliance repair services." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Appliance Repair Hub is a website for appliance repair services." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "Appliance Repair Hub is a website for appliance repair services." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/fafe436c-8375-4898-a6ce-cc3de31a5ac7/id-preview-54c66bf2--f44327c7-1035-479d-8ff0-aeae68ef70cf.lovable.app-1777936122482.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/fafe436c-8375-4898-a6ce-cc3de31a5ac7/id-preview-54c66bf2--f44327c7-1035-479d-8ff0-aeae68ef70cf.lovable.app-1777936122482.png" },
+      { title: "Reparaciones Ezequiel" },
+      { name: "description", content: "Servicio técnico de heladeras y lavarropas en Zona Sur." },
+      { name: "robots", content: "index, follow" },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-      {
-        rel: "icon",
-        type: "image/png",
-        href: "/favicon.png",
-      },
-    ],
-    scripts: [
-      {
-        src: "https://www.googletagmanager.com/gtag/js?id=G-1TFNV7GXKY",
-        async: true,
-      },
-      {
-        src: "https://www.googletagmanager.com/gtag/js?id=AW-18156593357",
-        async: true,
-      },
-      {
-        children: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-1TFNV7GXKY');gtag('config', 'AW-18156593357');`,
-      },
+      { rel: "stylesheet", href: appCss },
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
     ],
   }),
   shellComponent: RootShell,
@@ -74,7 +45,7 @@ export const Route = createRootRoute({
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
         <HeadContent />
       </head>
@@ -87,5 +58,22 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
+  useEffect(() => {
+    // Cargamos gtag dinámicamente para evitar el bloqueo de CSP
+    const script1 = document.createElement("script");
+    script1.src = "https://www.googletagmanager.com/gtag/js?id=G-1TFNV7GXKY";
+    script1.async = true;
+    document.head.appendChild(script1);
+
+    script1.onload = () => {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(...args: unknown[]) { window.dataLayer.push(args); }
+      window.gtag = gtag;
+      gtag("js", new Date());
+      gtag("config", "G-1TFNV7GXKY");
+      gtag("config", "AW-18156593357");
+    };
+  }, []);
+
   return <Outlet />;
 }
