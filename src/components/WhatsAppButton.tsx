@@ -2,10 +2,12 @@ import { MessageCircle } from "lucide-react";
 
 const PHONE = "5491164253686";
 const MESSAGE = "Hola! Me interesa solicitar una visita para reparación.";
-
 export const whatsappLink = `https://wa.me/${PHONE}?text=${encodeURIComponent(MESSAGE)}`;
-// CTA link: routes through /gracias para disparar la conversión de Google Ads y luego redirige a WhatsApp
 export const whatsappCtaLink = "/gracias";
+
+const WORKER_URL = "https://ga-proxy.gordilloezequiel.workers.dev";
+const MEASUREMENT_ID = "G-1TFNV7GXKY";
+const API_SECRET = "gHLfvut6QcGzj47fQ0tKgA";
 
 declare global {
   interface Window {
@@ -13,7 +15,20 @@ declare global {
   }
 }
 
-export function trackWhatsAppClick(location: string) {
+function getClientId(): string {
+  const cookies = document.cookie.split(";");
+  for (const cookie of cookies) {
+    const [key, value] = cookie.trim().split("=");
+    if (key === "_ga") {
+      const parts = value.split(".");
+      if (parts.length >= 4) return `${parts[2]}.${parts[3]}`;
+    }
+  }
+  return `${Math.random().toString(36).slice(2)}.${Date.now()}`;
+}
+
+export async function trackWhatsAppClick(location: string) {
+  // Intentar con gtag normal
   if (typeof window !== "undefined" && typeof window.gtag === "function") {
     window.gtag("event", "click_whatsapp", {
       event_category: "engagement",
@@ -23,11 +38,34 @@ export function trackWhatsAppClick(location: string) {
       send_to: "AW-18156593357/fT_CCIKqy68cEM3B3tFD",
     });
   }
+
+  // Mandar también via Measurement Protocol como backup
+  try {
+    const client_id = getClientId();
+    await fetch(WORKER_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        client_id,
+        measurement_id: MEASUREMENT_ID,
+        api_secret: API_SECRET,
+        events: [{
+          name: "click_whatsapp",
+          params: {
+            event_category: "engagement",
+            event_label: location,
+          },
+        }],
+      }),
+    });
+  } catch (e) {
+    console.error("Measurement Protocol error:", e);
+  }
 }
 
 export function WhatsAppFloating() {
   return (
-    <a
+    
       href={whatsappCtaLink}
       target="_blank"
       rel="noopener noreferrer"
