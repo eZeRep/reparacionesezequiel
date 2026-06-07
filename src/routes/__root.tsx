@@ -66,9 +66,10 @@ function RootComponent() {
     document.head.appendChild(script1);
 
     script1.onload = () => {
-      window.dataLayer = window.dataLayer || [];
-      function gtag(...args: unknown[]) { window.dataLayer.push(args); }
-      window.gtag = gtag;
+      const w = window as unknown as { dataLayer: unknown[]; gtag: (...args: unknown[]) => void };
+      w.dataLayer = w.dataLayer || [];
+      function gtag(...args: unknown[]) { w.dataLayer.push(args); }
+      w.gtag = gtag;
       gtag("js", new Date());
       gtag("config", "G-1TFNV7GXKY");
       gtag("config", "AW-18156593357");
