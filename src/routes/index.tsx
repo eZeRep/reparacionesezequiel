@@ -119,9 +119,9 @@ function Index() {
                 VISITA SIN COSTO en Lanús y alrededores
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight">
-                Reparación de<br/>
+                Técnico de Heladeras<br/>
                 <span style={{ background: "linear-gradient(90deg, oklch(0.92 0.06 225), oklch(0.78 0.13 230))", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-                  Electrodomésticos zona sur
+                  y Lavarropas en Zona Sur
                 </span>
               </h1>
               <p className="mt-6 text-lg md:text-xl text-white/90 max-w-xl leading-relaxed">
