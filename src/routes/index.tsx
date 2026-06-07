@@ -52,7 +52,7 @@ const localBusinessSchema = {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Reparación de Heladeras y Lavarropas en Lanús — +20 años de experiencia" },
+      { title: "Técnico de Heladeras y Lavarropas en Zona Sur — Visita sin cargo en Lanús" },
       { name: "description", content: "Servicio técnico de heladeras familiares y comerciales, lavarropas, exhibidoras, cámaras de frío y cavas de vino. Visita sin cargo en Lanús y alrededores. 3 meses de garantía." },
       { property: "og:title", content: "Reparación de Electrodomésticos en Lanús — Visita sin cargo" },
       { property: "og:description", content: "Más de 20 años reparando heladeras, lavarropas, cámaras de frío y exhibidoras. 3 meses de garantía." },
