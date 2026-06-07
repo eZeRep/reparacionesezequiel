@@ -65,7 +65,7 @@ export async function trackWhatsAppClick(location: string) {
 
 export function WhatsAppFloating() {
   return (
-    
+    <a
       href={whatsappCtaLink}
       target="_blank"
       rel="noopener noreferrer"

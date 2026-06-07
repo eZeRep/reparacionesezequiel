@@ -1,6 +1,3 @@
-Acá va el archivo completo corregido:
-
-```tsx
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { whatsappLink } from "@/components/WhatsAppButton";
@@ -35,7 +32,6 @@ export const Route = createFileRoute("/gracias")({
 
 function Gracias() {
   useEffect(() => {
-    // Disparar conversión una vez que el componente está montado y gtag cargado
     const fireAndRedirect = () => {
       if (typeof window.gtag === "function") {
         window.gtag("event", "conversion", {
@@ -47,7 +43,6 @@ function Gracias() {
       }, 1500);
     };
 
-    // Pequeño delay para asegurar que gtag.js terminó de cargar
     const t = setTimeout(fireAndRedirect, 300);
     return () => clearTimeout(t);
   }, []);
@@ -67,7 +62,7 @@ function Gracias() {
         <p className="mt-2 text-muted-foreground">
           Te estamos redirigiendo a WhatsApp …
         </p>
-        
+        <a
           href={whatsappLink}
           className="mt-6 inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-semibold text-white"
           style={{ backgroundColor: "var(--whatsapp)" }}
