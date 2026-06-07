@@ -52,7 +52,7 @@ const localBusinessSchema = {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Reparación de Heladeras y Lavarropas en Lanús — +20 años de experiencia" },
+      { title: "Técnico de Heladeras y Lavarropas en Zona Sur — Visita sin cargo en Lanús" },
       { name: "description", content: "Servicio técnico de heladeras familiares y comerciales, lavarropas, exhibidoras, cámaras de frío y cavas de vino. Visita sin cargo en Lanús y alrededores. 3 meses de garantía." },
       { property: "og:title", content: "Reparación de Electrodomésticos en Lanús — Visita sin cargo" },
       { property: "og:description", content: "Más de 20 años reparando heladeras, lavarropas, cámaras de frío y exhibidoras. 3 meses de garantía." },
@@ -287,7 +287,7 @@ function Index() {
             {[
               { img: heroImg, icon: Snowflake, title: "Heladeras familiares", text: "Reparación de heladeras de todas las marcas y modelos. Cambio de gas, motor, termostato y más." },
               { img: heladeraComercial, icon: Snowflake, title: "Heladeras comerciales", text: "Exhibidoras, cámaras de frío, freezers comerciales. Servicio para comercios y gastronomía." },
-              { img: lavarropasImg, icon: Wrench, title: "Lavarropas", text: "Reparación de lavarropas automáticos." },
+              { img: lavarropasImg, icon: Wrench, title: "Lavarropas", text: "Reparación de lavarropas automáticos y de carga superior. Todas las marcas. Diagnóstico sin cargo." },
               { img: cavaImg, icon: Snowflake, title: "Cavas de vino", text: "Mantenimiento y reparación de cavas climatizadas. Control de temperatura y humedad." },
               { img: camaraFrioImg, icon: Snowflake, title: "Cámaras de frío", text: "Instalación y reparación de cámaras frigoríficas para carnicerías, verdulerías y depósitos." },
               { img: exhibidoraImg, icon: Snowflake, title: "Exhibidoras", text: "Service de exhibidoras refrigeradas para kioscos, almacenes y supermercados." },
