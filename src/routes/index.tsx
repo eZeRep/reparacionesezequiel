@@ -287,7 +287,7 @@ function Index() {
             {[
               { img: heroImg, icon: Snowflake, title: "Heladeras familiares", text: "Reparación de heladeras de todas las marcas y modelos. Cambio de gas, motor, termostato y más." },
               { img: heladeraComercial, icon: Snowflake, title: "Heladeras comerciales", text: "Exhibidoras, cámaras de frío, freezers comerciales. Servicio para comercios y gastronomía." },
-              { img: lavarropasImg, icon: Wrench, title: "Lavarropas", text: "Reparación de lavarropas automáticos." },
+              { img: lavarropasImg, icon: Wrench, title: "Lavarropas", text: "Reparación de lavarropas automáticos y de carga superior. Todas las marcas. Diagnóstico sin cargo." },
               { img: cavaImg, icon: Snowflake, title: "Cavas de vino", text: "Mantenimiento y reparación de cavas climatizadas. Control de temperatura y humedad." },
               { img: camaraFrioImg, icon: Snowflake, title: "Cámaras de frío", text: "Instalación y reparación de cámaras frigoríficas para carnicerías, verdulerías y depósitos." },
               { img: exhibidoraImg, icon: Snowflake, title: "Exhibidoras", text: "Service de exhibidoras refrigeradas para kioscos, almacenes y supermercados." },
