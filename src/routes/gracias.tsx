@@ -10,41 +10,43 @@ export const Route = createFileRoute("/gracias")({
       { name: "description", content: "Gracias por contactarnos. Te estamos redirigiendo a WhatsApp." },
       { name: "robots", content: "noindex" },
     ],
-    scripts: [
-      {
-        async: true,
-        src: "https://www.googletagmanager.com/gtag/js?id=G-1TFNV7GXKY",
-      },
-      {
-        children: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-1TFNV7GXKY');
-          gtag('config', 'AW-18156593357');
-        `,
-      },
-    ],
   }),
-
   component: Gracias,
 });
 
 function Gracias() {
   useEffect(() => {
-    const fireAndRedirect = () => {
-      if (typeof window.gtag === "function") {
-        window.gtag("event", "conversion", {
-          send_to: "AW-18156593357/6NGRCIy5r6scEM3B3tFD",
-        });
-      }
-      setTimeout(() => {
-        window.location.href = whatsappLink;
-      }, 1500);
+    let redirected = false;
+    const redirect = () => {
+      if (redirected) return;
+      redirected = true;
+      window.location.href = whatsappLink;
     };
 
-    const t = setTimeout(fireAndRedirect, 300);
-    return () => clearTimeout(t);
+    // Failsafe: si gtag no carga o tarda demasiado, igual redirigimos.
+    const failsafe = setTimeout(redirect, 2500);
+
+    const fire = () => {
+      if (typeof window.gtag !== "function") return false;
+      window.gtag("event", "conversion", {
+        send_to: "AW-18156593357/6NGRCIy5r6scEM3B3tFD",
+        event_callback: () => {
+          clearTimeout(failsafe);
+          redirect();
+        },
+      });
+      return true;
+    };
+
+    // Esperar a que gtag esté disponible (lo carga __root.tsx)
+    if (!fire()) {
+      const poll = setInterval(() => {
+        if (fire()) clearInterval(poll);
+      }, 100);
+      setTimeout(() => clearInterval(poll), 2400);
+    }
+
+    return () => clearTimeout(failsafe);
   }, []);
 
   return (
