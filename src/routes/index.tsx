@@ -49,6 +49,51 @@ const localBusinessSchema = {
   sameAs: ["https://www.google.com/maps/place/Reparaciones+Ezequiel/@-34.7426371,-58.3692056,17z/data=!4m6!3m5!1s0x95a32bcd144baef5:0x96e3807838556cc5!8m2!3d-34.7426371!4d-58.3666307!16s%2Fg%2F11fvqt_71l"],
 };
 
+const faqs = [
+  {
+    q: "¿Realizan reparación de heladeras a domicilio?",
+    a: "Sí, vamos a tu casa o comercio en Lanús, Lomas de Zamora, Banfield, Avellaneda y toda la Zona Sur. La visita y el diagnóstico no tienen cargo.",
+  },
+  {
+    q: "¿Qué marcas reparan?",
+    a: "Trabajamos con todas las marcas: Whirlpool, Drean, LG, Samsung, Patrick, Gafa, Bosch, Electrolux, Philco, Columbia, Longvie, James, Candy, Eslabón de Lujo y más.",
+  },
+  {
+    q: "¿La visita tiene costo?",
+    a: "No. La visita técnica y el diagnóstico son sin cargo en Lanús y alrededores. Solo cobramos si decidís hacer la reparación.",
+  },
+  {
+    q: "¿Ofrecen garantía?",
+    a: "Sí, todas nuestras reparaciones tienen 3 meses de garantía escrita sobre el trabajo realizado y los repuestos colocados.",
+  },
+  {
+    q: "¿Trabajan en Lanús y Lomas de Zamora?",
+    a: "Sí, son nuestras zonas principales. También cubrimos Banfield, Temperley, Avellaneda, Quilmes, Bernal, Adrogué, Burzaco y todo el GBA Sur.",
+  },
+  {
+    q: "¿Reparan lavarropas automáticos?",
+    a: "Sí, reparamos lavarropas automáticos y de carga superior de todas las marcas: cambio de rulemanes, plaqueta, bomba, correa, programador y más.",
+  },
+  {
+    q: "¿Cuánto demora una reparación?",
+    a: "La mayoría de las reparaciones se resuelven en el día, en una sola visita. Si necesitamos un repuesto específico, normalmente lo conseguimos en 24 a 48 hs.",
+  },
+  {
+    q: "¿Atienden urgencias?",
+    a: "Sí, atendemos urgencias en el día (especialmente para comercios con heladeras, cámaras de frío o exhibidoras que no pueden esperar). Escribinos por WhatsApp y coordinamos.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -58,10 +103,8 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Más de 20 años reparando heladeras, lavarropas, cámaras de frío y exhibidoras. 3 meses de garantía." },
     ],
     scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(localBusinessSchema),
-      },
+      { type: "application/ld+json", children: JSON.stringify(localBusinessSchema) },
+      { type: "application/ld+json", children: JSON.stringify(faqSchema) },
     ],
   }),
   component: Index,
@@ -361,6 +404,28 @@ function Index() {
           >
             <Phone className="h-6 w-6" /> Pedí tu visita sin costo
           </a>
+        </div>
+      </section>
+      {/* FAQ */}
+      <section id="faq" className="py-20 bg-background">
+        <div className="mx-auto max-w-3xl px-6">
+          <div className="text-center mb-10">
+            <div className="inline-block px-4 py-1 rounded-full text-sm font-semibold mb-4" style={{ backgroundColor: "var(--brand-light)", color: "var(--brand-deep)" }}>
+              PREGUNTAS FRECUENTES
+            </div>
+            <h2 className="text-3xl md:text-4xl font-black text-foreground">Lo que más nos consultan</h2>
+          </div>
+          <div className="space-y-3">
+            {faqs.map((f, i) => (
+              <details key={i} className="group rounded-2xl bg-card border border-border shadow-sm overflow-hidden">
+                <summary className="cursor-pointer list-none flex items-center justify-between gap-4 p-5 font-bold text-foreground hover:bg-muted/50 transition-colors">
+                  <span>{f.q}</span>
+                  <span className="shrink-0 flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform group-open:rotate-45" style={{ backgroundColor: "var(--brand-primary)" }}>+</span>
+                </summary>
+                <div className="px-5 pb-5 text-muted-foreground leading-relaxed">{f.a}</div>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
 
