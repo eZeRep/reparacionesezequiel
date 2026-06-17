@@ -406,6 +406,28 @@ function Index() {
           </a>
         </div>
       </section>
+      {/* FAQ */}
+      <section id="faq" className="py-20 bg-background">
+        <div className="mx-auto max-w-3xl px-6">
+          <div className="text-center mb-10">
+            <div className="inline-block px-4 py-1 rounded-full text-sm font-semibold mb-4" style={{ backgroundColor: "var(--brand-light)", color: "var(--brand-deep)" }}>
+              PREGUNTAS FRECUENTES
+            </div>
+            <h2 className="text-3xl md:text-4xl font-black text-foreground">Lo que más nos consultan</h2>
+          </div>
+          <div className="space-y-3">
+            {faqs.map((f, i) => (
+              <details key={i} className="group rounded-2xl bg-card border border-border shadow-sm overflow-hidden">
+                <summary className="cursor-pointer list-none flex items-center justify-between gap-4 p-5 font-bold text-foreground hover:bg-muted/50 transition-colors">
+                  <span>{f.q}</span>
+                  <span className="shrink-0 flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform group-open:rotate-45" style={{ backgroundColor: "var(--brand-primary)" }}>+</span>
+                </summary>
+                <div className="px-5 pb-5 text-muted-foreground leading-relaxed">{f.a}</div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ZONA DE COBERTURA */}
       <section className="py-20 bg-muted">
