@@ -12,7 +12,8 @@ import antes2 from "@/assets/antes-2.jpg";
 import despues2 from "@/assets/despues-2.jpg";
 import logoImg from "@/assets/logo.png";
 import tecnicoImg from "@/assets/tecnico.png";
-import { WhatsAppFloating, whatsappCtaLink, trackWhatsAppClick } from "@/components/WhatsAppButton";
+// Cambiamos whatsappCtaLink por whatsappLink para que abra el chat real
+import { WhatsAppFloating, whatsappLink, trackWhatsAppClick } from "@/components/WhatsAppButton";
 import { BeforeAfter } from "@/components/BeforeAfter";
 import { ReviewsCarousel } from "@/components/ReviewsCarousel";
 
@@ -105,6 +106,20 @@ export const Route = createFileRoute("/")({
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(localBusinessSchema) },
       { type: "application/ld+json", children: JSON.stringify(faqSchema) },
+      
+      // ─── GOOGLE ANALYTICS INTEGRADO DIRECTAMENTE ACÁ ───
+      { 
+        src: "https://www.googletagmanager.com/gtag/js?id=G-1TFNV7GXKY", 
+        async: true 
+      },
+      {
+        children: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-1TFNV7GXKY');
+        `
+      }
     ],
   }),
   component: Index,
@@ -122,7 +137,7 @@ function Index() {
             <img src={logoImg} alt="Reparaciones Ezequiel — Comercial y Familiar" className="h-20 md:h-24 w-auto object-contain text-2xl" width={320} height={320} />
           </a>
           <a
-            href={whatsappCtaLink}
+            href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackWhatsAppClick("header")}
@@ -173,7 +188,7 @@ function Index() {
 
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <a
-                  href={whatsappCtaLink}
+                  href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackWhatsAppClick("hero")}
@@ -231,7 +246,7 @@ function Index() {
         </div>
       </section>
 
-      {/* ANTES Y DESPUÉS (justo después del hero) */}
+      {/* ANTES Y DESPUÉS */}
       <section className="py-16 md:py-20 bg-muted">
         <div className="mx-auto max-w-7xl px-6">
           <div className="text-center mb-10">
@@ -362,7 +377,6 @@ function Index() {
             <h2 className="text-3xl md:text-4xl font-black text-foreground">Tu técnico de confianza en Zona Sur</h2>
           </div>
           <div className="grid items-center gap-8 md:grid-cols-[260px_1fr]">
-            {/* Espacio para foto del técnico — reemplazar src cuando esté la foto */}
             <div className="mx-auto w-full max-w-[260px] aspect-square rounded-3xl overflow-hidden bg-card shadow-[var(--shadow-soft)]">
               <img src={tecnicoImg} alt="Reparaciones Ezequiel - Servicio técnico de electrodomésticos" className="h-full w-full object-cover" loading="lazy" />
             </div>
@@ -371,7 +385,7 @@ function Index() {
                 Hace más de 20 años trabajamos reparando heladeras, lavarropas, cámaras de frío, exhibidoras y equipos de refrigeración para hogares y comercios de Zona Sur. Atendemos en Lanús, Lomas de Zamora, Banfield, Avellaneda y alrededores, siempre con trato directo, diagnóstico claro y garantía en cada reparación. Nuestra prioridad es ofrecer soluciones rápidas, honestas y que realmente duren.
               </p>
               <a
-                href={whatsappCtaLink}
+                href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackWhatsAppClick("about")}
@@ -395,7 +409,7 @@ function Index() {
           <h2 className="text-3xl md:text-5xl font-black">¿Tu equipo no funciona?</h2>
           <p className="mt-4 text-lg md:text-xl text-white/90">Escribinos por WhatsApp y coordinamos una visita sin cargo en Zona Sur (Lanús, Lomas, Banfield, Avellaneda y alrededores). Reparamos en el día.</p>
           <a
-            href={whatsappCtaLink}
+            href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackWhatsAppClick("cta_intermedio")}
@@ -406,6 +420,7 @@ function Index() {
           </a>
         </div>
       </section>
+
       {/* FAQ */}
       <section id="faq" className="py-20 bg-background">
         <div className="mx-auto max-w-3xl px-6">
@@ -464,7 +479,7 @@ function Index() {
           <div>
             <h4 className="font-bold mb-3">¿Necesitás ayuda?</h4>
             <a
-              href={whatsappCtaLink}
+              href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackWhatsAppClick("footer")}
