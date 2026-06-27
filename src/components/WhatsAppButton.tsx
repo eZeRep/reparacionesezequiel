@@ -2,8 +2,8 @@ import { MessageCircle } from "lucide-react";
 
 const PHONE = "5491164253686";
 const MESSAGE = "Hola! Me interesa solicitar una visita para reparación.";
+// El link real a WhatsApp
 export const whatsappLink = `https://wa.me/${PHONE}?text=${encodeURIComponent(MESSAGE)}`;
-export const whatsappCtaLink = "/gracias";
 
 const WORKER_URL = "https://ga-proxy.gordilloezequiel.workers.dev";
 const MEASUREMENT_ID = "G-1TFNV7GXKY";
@@ -16,6 +16,7 @@ declare global {
 }
 
 function getClientId(): string {
+  if (typeof document === "undefined") return "";
   const cookies = document.cookie.split(";");
   for (const cookie of cookies) {
     const [key, value] = cookie.trim().split("=");
@@ -28,7 +29,7 @@ function getClientId(): string {
 }
 
 export async function trackWhatsAppClick(location: string) {
-  // Intentar con gtag normal
+  // 1. Intentar con gtag tradicional
   if (typeof window !== "undefined" && typeof window.gtag === "function") {
     window.gtag("event", "click_whatsapp", {
       event_category: "engagement",
@@ -39,12 +40,14 @@ export async function trackWhatsAppClick(location: string) {
     });
   }
 
-  // Mandar también via Measurement Protocol como backup
+  // 2. Enviar via Measurement Protocol como backup
   try {
     const client_id = getClientId();
+    // Usamos el "keepalive: true" para que la petición no se cancele si el usuario cambia de pestaña
     await fetch(WORKER_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
+      keepalive: true, 
       body: JSON.stringify({
         client_id,
         measurement_id: MEASUREMENT_ID,
@@ -66,7 +69,7 @@ export async function trackWhatsAppClick(location: string) {
 export function WhatsAppFloating() {
   return (
     <a
-      href={whatsappCtaLink}
+      href={whatsappLink} // <--- CORREGIDO: Ahora sí va a WhatsApp
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contactar por WhatsApp"
