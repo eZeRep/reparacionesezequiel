@@ -69,7 +69,7 @@ export async function trackWhatsAppClick(location: string) {
 export function WhatsAppFloating() {
   return (
     <a
-      href={whatsappLink} // <--- CORREGIDO: Ahora sí va a WhatsApp
+      href={whatsappLink} // <--- Ahora sí va a WhatsApp directamente
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contactar por WhatsApp"
