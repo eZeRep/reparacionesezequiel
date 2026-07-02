@@ -61,7 +61,7 @@ function RootComponent() {
   useEffect(() => {
     // Cargamos gtag dinámicamente para evitar el bloqueo de CSP
     const script1 = document.createElement("script");
-    script1.src = "https://www.googletagmanager.com/gtag/js?id=G-1TFNV7GXKY";
+    script1.src = "https://www.googletagmanager.com/gtag/js?id=AW-18156593357";
     script1.async = true;
     document.head.appendChild(script1);
 
